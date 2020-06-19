@@ -1,7 +1,18 @@
 #简易的个人博客系统
-
+##前言
+用到的技术点有：
+* 框架：SSM
+* 数据库：MySQL
+* 前端：JSP
+* 项目管理：MAVEN
+* 用户登录：Shiro
+* 博客编写：Ueditor
+* 博客搜索：Lucene
+* 开发工具：IntellijIDEA
+* 开发环境：Mac
 ##导入数据库(建表)
 新建数据库db_blog,在数据库中新建5个表，分别如下。
+
 ###t_blog表的创建
 ~~~
 CREATE TABLE `t_blog` (
