@@ -1,5 +1,7 @@
-#个人博客系统
-##前言
+个人博客系统
+===
+前言
+---
 用到的技术点有：
 * 框架：SSM
 * 数据库：MySQL
@@ -10,10 +12,11 @@
 * 博客搜索：Lucene
 * 开发工具：IntellijIDEA
 * 开发环境：Mac
-##导入数据库(建表)
+数据库
+---
 新建数据库db_blog,在数据库中新建5个表，分别如下。
 
-###t_blog表的创建
+t_blog表的创建
 ~~~
 CREATE TABLE `t_blog` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -31,7 +34,7 @@ CREATE TABLE `t_blog` (
   CONSTRAINT `t_blog_ibfk_1` FOREIGN KEY (`typeId`) REFERENCES `t_blogtype` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COMMENT='博客表';
 ~~~
-###t_blogger表的创建
+t_blogger表的创建
 ~~~
 CREATE TABLE `t_blogger` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -45,7 +48,7 @@ CREATE TABLE `t_blogger` (
   UNIQUE KEY `id` (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='博主';
 ~~~
-###t_blogtype表的创建
+t_blogtype表的创建
 ~~~
 CREATE TABLE `t_blogtype` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -55,7 +58,7 @@ CREATE TABLE `t_blogtype` (
   KEY `id` (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COMMENT='博客类型表';
 ~~~
-###t_comment表的创建
+t_comment表的创建
 ~~~
 CREATE TABLE `t_comment` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
@@ -69,7 +72,7 @@ CREATE TABLE `t_comment` (
   CONSTRAINT `t_comment_ibfk_1` FOREIGN KEY (`blogId`) REFERENCES `t_blog` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COMMENT='评论表';
 ~~~
-###t_link表的创建
+t_link表的创建
 ~~~
 CREATE TABLE `t_link` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
