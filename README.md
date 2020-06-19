@@ -67,23 +67,5 @@ CREATE TABLE `t_link` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='友情链接';
 ~~~
-##建立项目
-##注入依赖
-###添加Servlet支持
-Eclipse建立项目时index.jsp可能会出现红色，所以添加这个依赖javax.servlet。然后引入jsp的依赖javax.servlet-api.我这里没有添加，因为index.jsp没有报错。
-###添加jstl支持javax.servlet...
-##导入webapp
-在webapp中导入admin, foreground, static, favicon.ico,image.jsp,login.jsp,源码中缺少index.jsp
-##修改web.xml
-##空
-##BlogMapper.xml
-有一个地方是，编写Blog的resultMap时，其中的blogType是外键，所以要用到association，而不是result，注意一下。
-##评论审核不成功
-CommentMapper.xml中update 的<update></update> 错写成了<select></select>
-##个人信息页面的profile无法更新
-是jsp中写成proFile了
-##博客中上传的图片无法显示
-路径问题
-##个人资料中图片无法上传
-路径问题
+
 
