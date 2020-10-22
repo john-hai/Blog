@@ -38,7 +38,8 @@ public class BlogAdminController {
     @RequestMapping({"/save"})
     public String save(Blog blog, HttpServletResponse response) throws IOException {
         int resultTotal = 0;
-        if(blog.getId() == null){ //添加
+        if(blog.getId() == null){
+            //添加
             resultTotal = blogService.add(blog);
             blogIndex.addIndex(blog);
         }else{  //修改
@@ -73,7 +74,7 @@ public class BlogAdminController {
 //        获取共有多少条博客信息
         Long total = blogService.getTotal(map);
 
-//        封装到json
+//      封装到json
         JSONObject result = new JSONObject();
         JsonConfig config = new JsonConfig();
         config.registerJsonValueProcessor(Date.class, new DateJsonValueProcessor("yyyy-MM-dd"));

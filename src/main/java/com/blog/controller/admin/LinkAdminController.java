@@ -52,11 +52,12 @@ public class LinkAdminController {
         return null;
     }
 
-    //    保存友情链接信息
+    /** 保存友情链接信息*/
     @RequestMapping({"/save"})
     public String save(Link link, HttpServletResponse response) throws IOException {
         int resultTotal = 0;
-        if(link.getId() == null){   //添加
+        if(link.getId() == null){
+            //添加
             resultTotal = linkService.add(link);
         }else { //更新
             resultTotal = linkService.update(link);
@@ -71,7 +72,7 @@ public class LinkAdminController {
         return null;
     }
 
-    //    删除友情链接信息
+    /** 删除友情链接信息 */
     @RequestMapping({"/delete"})
     public String delete(@RequestParam("ids")String ids, HttpServletResponse response) throws IOException {
         String[] idsStr = ids.split(",");

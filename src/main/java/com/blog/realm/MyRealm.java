@@ -18,7 +18,7 @@ public class MyRealm extends AuthorizingRealm {
     @Resource
     private BloggerService bloggerService;
     /**
-     * 获取授权信息的函数，因为我们的后台不做对权限的分类，只要登录后台就有了后台的所有权限
+     * 获取授权信息的函数，因为后台不做对权限的分类，只要登录后台就有了后台的所有权限
      * @param principalCollection
      * @return
      */
